@@ -1,0 +1,16 @@
+This is our class repo.  This file is our syllabus.
+
+Topic:  Static Analysis and Model Checking
+(mainly CBMC)
+
+CBMC can be found at www.cprover.org/cbmc
+
+Tasks:
+
+- Present 1 research paper on static analysis or model checking in class (25%)
+
+- Assignment to verify/find bug in real code using CBMC
+
+- Project -- either survey of an important static analysis/model
+  checking topic, a small research project, or a more ambitious
+  verification with CBMC
