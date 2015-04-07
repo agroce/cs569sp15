@@ -14,3 +14,29 @@ Tasks:
 - Project -- either survey of an important static analysis/model
   checking topic, a small research project, or a more ambitious
   verification with CBMC
+
+ASSIGNMENT 1 DETAILS:
+
+-- Install and make sure you can run the latest CBMC.
+
+-- Find a (small, for your sake) C program (or function) online that
+   implements something easy to explain and specify.  You can write
+   one.  The code should be at least 50LOC and non-trivial (e.g., you
+   can't prove a swap function correct) -- at least one loop,
+   preferably.
+
+-- Write a harness that would be used to look for bugs in this code.
+
+-- If the code is correct, introduce some bugs in the code, preferably
+   subtle ones that might easily escape a decent test suite.  Check
+   this -- does your harness find these bugs?
+
+-- Write up your results: was the program correct or buggy?  What was
+   hard to specify?  Was there functionality you could not specify?
+   How long did it take to verify with different loop bounds?  How did
+   turning on/off bounds and pointer checker affect cbmc runtime?
+   Discuss the ability of the harness to find the bugs you introduced,
+   and how to address the problem if it did not, including (if
+   possible) a revised harness to find them.  Minimum of 400 words.
+
+DUE DATE: April 21, 2015 (before class)
