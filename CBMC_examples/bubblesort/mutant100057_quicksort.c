@@ -19,14 +19,17 @@ void quickSort( int a[], int l, int r)
 
 
 int partition( int a[], int l, int r) {
+  printf ("LOG PARTITION: l = %d, r = %d\n", l, r);
   int pivot, i, j, t;
   pivot = a[l];
+  printf ("LOG PIVOT = %d\n", pivot);
   i = l; j = r+1;
   
   while( 1)
     {
-      do ++i; while( a[i] <= pivot && i <= r );
- /* MUTANT (rep_op) */      do --j; while( a[j] >= pivot );
+      printf ("LOG i = %d, r = %d\n", i, r);
+      do ++i; while( i <= r && a[i] <= pivot );
+ /* MUTANT (rep_op) */      do ++j; while( a[j] > pivot );
       if( i >= j ) break;
       t = a[i]; a[i] = a[j]; a[j] = t;
     }

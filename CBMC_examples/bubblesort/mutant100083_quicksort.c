@@ -23,7 +23,7 @@ int partition( int a[], int l, int r) {
   int pivot, i, j, t;
   pivot = a[l];
   printf ("LOG PIVOT = %d\n", pivot);
- /* MUTANT (rep_op) */  i = l; j = r*1;
+  i = l; j = r+1;
   
   while( 1)
     {
@@ -39,5 +39,5 @@ int partition( int a[], int l, int r) {
 
 
 void mysort(int a[], unsigned int size) {
-  quickSort(a, 0, size-1);
+ /* MUTANT (rep_const) */  quickSort(a, 0, size--1);
 }
