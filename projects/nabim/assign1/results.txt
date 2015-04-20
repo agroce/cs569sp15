@@ -20,3 +20,11 @@ Next, I also asserted the following:
 However, I was not able to think of a way to assert the correctness of the "shortest" property of the
 path reported by the C program i.e. a way to verify whether the C program was actually returning the
 shortest path.
+
+I also created a buggy version of dijkstra by replacing < operator with > in the portion of code which
+determines the current unvisited node with the shortest path i.e. now instead of choosing the node which
+has had the least cost until now, my introduced bug would cause to choose the complete opposite node.
+
+My harness ended up verifying this evil version dijkstra as well, because I had not been able to ensure
+asserting the "shortest" property of the path.
+
