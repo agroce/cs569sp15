@@ -21,6 +21,19 @@ However, I was not able to think of a way to assert the correctness of the "shor
 path reported by the C program i.e. a way to verify whether the C program was actually returning the
 shortest path.
 
+CBMC Runtime:
+For a GRAPHSIZE of 3 and a loop unwinding of 15 times, with bounds check and pointer check, the
+verification took approximately 34 seconds. For the same parameters but without bounds check and
+pointer check the verification took approximately 24 seconds.
+
+For a GRAPHSIZE of 4 and a loop unwinding of 20 times, without bounds check and pointer check, the
+verification took 1 min 22 seconds approximately. For the same parameters but with bounds check and
+pointer check, the verification took approximately 2 min 4 seconds. 
+
+For a GRAPHSIZE of 5 and a loop unwinding of 20 times, without bounds check and pointer check, the
+verification took 3 min 34 seconds approximately.
+
+Checking correctnessof harness using a buggy version:
 I also created a buggy version of dijkstra by replacing < operator with > in the portion of code which
 determines the current unvisited node with the shortest path i.e. now instead of choosing the node which
 has had the least cost until now, my introduced bug would cause to choose the complete opposite node.
