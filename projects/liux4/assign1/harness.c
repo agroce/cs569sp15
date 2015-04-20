@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "assert.h"
-#include "sut.h"
+#include "seqlist.h"
 
 
 int nondet_int(); // returns a non-deterministic integer value
@@ -52,7 +52,7 @@ int main(int argc, const char * argv[])
         x = nondet_int();
         
         /* Commented when use CBMC to check */
-        //x = rand()%100;
+//        x = rand()%100;
         
         InsertList (SEQA,x,i);
 

@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "sut.h"
+#include "seqlist.h"
 
 void Error(char * message)
 {
