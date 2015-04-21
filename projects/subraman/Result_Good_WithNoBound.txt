@@ -1,6 +1,3 @@
-nitin@ubuntu:~$ cd Desktop/
-nitin@ubuntu:~/Desktop$ cd Assignment/
-nitin@ubuntu:~/Desktop/Assignment$ cbmc harnessgood.c -DMAX=10 --unwind 21
 file harnessgood.c: Parsing
 Converting
 Type-checking harnessgood
