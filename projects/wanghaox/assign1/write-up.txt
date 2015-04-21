@@ -1,0 +1,14 @@
+CS 569 Assignment #1
+Haoxiang Wang
+ONID: wanghaox
+ID: 932359049
+
+The implementation I am using for this assignment is the heap sort. The whole program can be separated into four parts. They are harness.c, heapsort.h, heapsort.c, and badheapsort.c. The harness.c is used to compile with heapsort.c or badheapsort.c, and the heapsort.h is the head file for them. The heapsort.c is the correct file that can be compiled with harness.c without errors, and the badheapsort.c is the file that I created some bugs in and will be compiled failed with harness.c. 
+
+I have made some bugs into the badheapsort.c, and the facts turns out really interesting. Most of the bugs will be found out by the harness I wrote except one bug. When I changed line 43 in the heapsort.c form "s = 2 * f + 1" into "s = 2 * f", the array can also be sorted correctly but only took longer time. Except this, other changes I have made into the badheapsort.c can all be detected by the harness.c. Some of them turned out as array's boundary errors, some of them turn out as unwinding assertion loop errors, and some of them turn out as assertion errors. 
+
+As for the run time of the whole compiling process, the time varies when I set different numbers of loops. I set the size of the array to 6 and unwind to 8, the total run time is around 48.1s. When I set the size to 3 and unwind to 4, the total run time is around 1.2s. There is a huge different between setting different size and loop bounds. I also tried to run the process with size set to 20, it takes too long to finish it, so I gave up on this one. As for how the bound checking and pointer checking affect the run time, I used size of 6 and unwind of 8 to do the exam. After I turned off both checkings, the run time decried from 48.1s to 38.6s. So turning off the bound checking and pointer checking will decries the run time. 
+
+The code implements the heap sort with two parts, and they are in two different functions. One is the function creates the heap, and another one is the function does the heap sort. The harness I wrote would do some assertion after each function is called. So if the heap created by the program is not correct, the harness will through out a failure. If the final result of the sort is not correct, the harness will also through out a failure. However, if the process happens in the middle of the function and turns out a correct result, like what I mentioned at the beginning of the profile, my harness can do nothing about it.
+
+I have gained a lot experience by doing this assignment. Learning how to using CBMC is a challenge but also a funny thing to me. After learning how to bugging with a model checking tool helps me understand more about the code itself and how to write and debug it. I have learned a lot form this assignment.
