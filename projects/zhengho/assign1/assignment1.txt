@@ -1,0 +1,19 @@
+Assignment1
+name:Hong Zheng
+
+1.The function of my program.
+Given 2 parameters of initual_no and n,what is implemented is that n consecutive prime number larger then the initual_no will be calculated. These numbers are saved and will be ordered from the larger one to the smaller one.
+
+2.My code is correct but I introduce a bug in the program in the for loop.
+My bug is that when I order the array  in order from the larger element to the smaller one.The boundary element is ignored.Then this time the harness does find the bugs.
+
+3.The program is buggy. The bug is that the boundary element is not considered, which is against the condition in the assert. 
+What is hard to specify is that sometimes the for loop of program is not buggy and the CBMC is always regarded it as a potential bugs but indeed it is not. 
+One thing the CBMC  seems to be difficult to specify is that if I use one function to call another different function which there is a for loop in it. 
+The CBMC will regard the for loop as an potential problem and cause verification fail.
+The run time for just doing the bounds check is less than the run time for no bound check.It is rather weird. I am not sure why it happens.
+But the run time for the doing the bounds check and the pointer check is the greatest, which is reasonable.
+The harness is based on two conditions to find the bugs especially for the bug I introduced.
+First is to ensure every element in the target array is a prime number.
+Second is to compare each consecutive element in the target to see whether all the numbers are in an descendant order.
+If the bug is not specified by CBMC , I think it is reasonable to write a program to implement run-time check to see the result for certain input.
