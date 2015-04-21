@@ -8,7 +8,23 @@ doing well for the following conditions:
 The stack implementation code was correct, and cbmc found it correct by using the mentioned harness.
 
 #What was hard to specify?  Was there functionality you could not specify?
+I could not specify whethet the for loop in the display function works well or not.
 
 #CBMC Runtime Result
+When the verificatin is successful, for DSIZE = 2  and unwind = 4, with bounds check and pointer check, the
+CBMC runtime is about 0.06 seconds (and it checks 37805 variables, 47823 clauses). For the same parameters but without bounds check and
+pointer check the verification took  0.031 seconds (and it checks 28018 variables, 19103 clauses).
+
+When the verificatin is successful,for DSIZE = 3 and unwind = 6, with bounds check and pointer check, the
+CBMC runtime is about 1.314 seconds (it checks 102462 variables, 331199 clauses). For the same parameters but without bounds check and
+pointer check the verification took approximately 1.201 seconds (it checks 86627 variables, 284339 clauses).
+
+When the verificatin is successful,for DSIZE = 4 and unwind = 8, with bounds check and pointer check, the
+CBMC runtime is about 7.936 seconds (it checks 193683 variables, 651151 clauses). For the same parameters but without bounds check and
+pointer check the verification took approximately 6.216 seconds ( it checks 162115 variables, 556889 clauses).
+
+We can see that the increase in the DSIZE and unwind value will increase the CBMC runtime. 
+However, when the bounds check and pointer check is not used, the CBMC runtime will decrease and the number of variables and clauses 
+which CBMC checks also decreases.
 
 # The ability of the harness to find the bugs you introduced
