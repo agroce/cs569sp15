@@ -1,0 +1,481 @@
+Unwinding loop c::display.0 iteration 19 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 20 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 21 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::main.0 iteration 11 file harnessbad.c line 15 function main thread 0
+Unwinding loop c::display.0 iteration 1 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 2 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 3 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 4 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 5 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 6 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 7 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 8 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 9 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 10 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 11 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 12 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 13 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 14 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 15 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 16 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 17 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 18 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 19 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 20 file harnessbad.c line 90 function display thread 0
+Unwinding loop c::display.0 iteration 21 file harnessbad.c line 90 function display thread 0
+size of program expression: 2669 steps
+simple slicing removed 27 assignments
+Generated 22 VCC(s), 21 remaining after simplification
+Passing problem to propositional reduction
+Running propositional reduction
+Solving with MiniSAT 2.2.0 with simplifier
+179165 variables, 793677 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Runtime decision procedure: 3.119s
+Building error trace
+
+Counterexample:
+
+State 3 file <built-in-additions> line 22 thread 0
+----------------------------------------------------
+  __CPROVER_threads_exited=__CPROVER_threads_exited#1 (?)
+
+State 4 file <built-in-additions> line 23 thread 0
+----------------------------------------------------
+  __CPROVER_next_thread_id=0ul (00000000000000000000000000000000)
+
+State 5 file <built-in-additions> line 30 thread 0
+----------------------------------------------------
+  __CPROVER_deallocated=NULL (00000000000000000000000000000000)
+
+State 6 file <built-in-additions> line 31 thread 0
+----------------------------------------------------
+  __CPROVER_malloc_object=NULL (00000000000000000000000000000000)
+
+State 7 file <built-in-additions> line 32 thread 0
+----------------------------------------------------
+  __CPROVER_malloc_size=0u (00000000000000000000000000000000)
+
+State 8 file <built-in-additions> line 33 thread 0
+----------------------------------------------------
+  __CPROVER_malloc_is_new_array=FALSE (0)
+
+State 9 file <built-in-additions> line 45 thread 0
+----------------------------------------------------
+  __CPROVER_rounding_mode=0 (00000000000000000000000000000000)
+
+State 10 file harnessbad.c line 6 thread 0
+----------------------------------------------------
+  queue_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000 })
+
+State 11 file harnessbad.c line 7 thread 0
+----------------------------------------------------
+  rear=-1 (11111111111111111111111111111111)
+
+State 12 file harnessbad.c line 8 thread 0
+----------------------------------------------------
+  front=-1 (11111111111111111111111111111111)
+
+State 13 file <built-in-additions> line 66 thread 0
+----------------------------------------------------
+  __CPROVER_pipe_count=0u (00000000000000000000000000000000)
+
+State 17 file harnessbad.c line 11 function main thread 0
+----------------------------------------------------
+  choice=2 (00000000000000000000000000000010)
+
+State 18 file harnessbad.c line 12 function main thread 0
+----------------------------------------------------
+  a=0 (00000000000000000000000000000000)
+
+State 19 file harnessbad.c line 12 function main thread 0
+----------------------------------------------------
+  a=519440 (00000000000001111110110100010000)
+
+State 20 file harnessbad.c line 15 function main thread 0
+----------------------------------------------------
+  i=0 (00000000000000000000000000000000)
+
+State 21 file harnessbad.c line 15 function main thread 0
+----------------------------------------------------
+  i=0 (00000000000000000000000000000000)
+
+State 24 file harnessbad.c line 19 function main thread 0
+----------------------------------------------------
+  choice=1 (00000000000000000000000000000001)
+
+State 25 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=0 (00000000000000000000000000000000)
+
+State 26 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=519440 (00000000000001111110110100010000)
+LOG: Choice is 1
+
+State 32 file harnessbad.c line 33 function main thread 0
+----------------------------------------------------
+  add_item=519440 (00000000000001111110110100010000)
+
+State 34 file harnessbad.c line 52 function insert thread 0
+----------------------------------------------------
+  front=0 (00000000000000000000000000000000)
+
+State 35 file harnessbad.c line 53 function insert thread 0
+----------------------------------------------------
+  rear=0 (00000000000000000000000000000000)
+
+State 36 file harnessbad.c line 57 function insert thread 0
+----------------------------------------------------
+  rear=1 (00000000000000000000000000000001)
+
+State 37 file harnessbad.c line 60 function insert thread 0
+----------------------------------------------------
+  i=0 (00000000000000000000000000000000)
+
+State 38 file harnessbad.c line 62 function insert thread 0
+----------------------------------------------------
+  queue_array[1]=519440 (00000000000001111110110100010000)
+
+State 39 file harnessbad.c line 63 function insert thread 0
+----------------------------------------------------
+  rear=2 (00000000000000000000000000000010)
+LOG: Element Inserted in 2 is 519440
+
+State 44 file harnessbad.c line 15 function main thread 0
+----------------------------------------------------
+  i=1 (00000000000000000000000000000001)
+
+State 48 file harnessbad.c line 19 function main thread 0
+----------------------------------------------------
+  choice=1 (00000000000000000000000000000001)
+
+State 49 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=0 (00000000000000000000000000000000)
+
+State 50 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=520440 (00000000000001111111000011111000)
+LOG: Choice is 1
+
+State 56 file harnessbad.c line 33 function main thread 0
+----------------------------------------------------
+  add_item=520440 (00000000000001111111000011111000)
+
+State 58 file harnessbad.c line 60 function insert thread 0
+----------------------------------------------------
+  i=0 (00000000000000000000000000000000)
+
+State 60 file harnessbad.c line 62 function insert thread 0
+----------------------------------------------------
+  queue_array[2]=520440 (00000000000001111111000011111000)
+
+State 61 file harnessbad.c line 63 function insert thread 0
+----------------------------------------------------
+  rear=3 (00000000000000000000000000000011)
+LOG: Element Inserted in 3 is 520440
+
+State 66 file harnessbad.c line 15 function main thread 0
+----------------------------------------------------
+  i=2 (00000000000000000000000000000010)
+
+State 70 file harnessbad.c line 19 function main thread 0
+----------------------------------------------------
+  choice=1 (00000000000000000000000000000001)
+
+State 71 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=0 (00000000000000000000000000000000)
+
+State 72 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=521440 (00000000000001111111010011100000)
+LOG: Choice is 1
+
+State 78 file harnessbad.c line 33 function main thread 0
+----------------------------------------------------
+  add_item=521440 (00000000000001111111010011100000)
+
+State 80 file harnessbad.c line 60 function insert thread 0
+----------------------------------------------------
+  i=0 (00000000000000000000000000000000)
+
+State 82 file harnessbad.c line 62 function insert thread 0
+----------------------------------------------------
+  queue_array[3]=521440 (00000000000001111111010011100000)
+
+State 83 file harnessbad.c line 63 function insert thread 0
+----------------------------------------------------
+  rear=4 (00000000000000000000000000000100)
+LOG: Element Inserted in 4 is 521440
+
+State 88 file harnessbad.c line 15 function main thread 0
+----------------------------------------------------
+  i=3 (00000000000000000000000000000011)
+
+State 92 file harnessbad.c line 19 function main thread 0
+----------------------------------------------------
+  choice=1 (00000000000000000000000000000001)
+
+State 93 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=0 (00000000000000000000000000000000)
+
+State 94 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=522440 (00000000000001111111100011001000)
+LOG: Choice is 1
+
+State 100 file harnessbad.c line 33 function main thread 0
+----------------------------------------------------
+  add_item=522440 (00000000000001111111100011001000)
+
+State 102 file harnessbad.c line 60 function insert thread 0
+----------------------------------------------------
+  i=0 (00000000000000000000000000000000)
+
+State 104 file harnessbad.c line 62 function insert thread 0
+----------------------------------------------------
+  queue_array[4]=522440 (00000000000001111111100011001000)
+
+State 105 file harnessbad.c line 63 function insert thread 0
+----------------------------------------------------
+  rear=5 (00000000000000000000000000000101)
+LOG: Element Inserted in 5 is 522440
+
+State 110 file harnessbad.c line 15 function main thread 0
+----------------------------------------------------
+  i=4 (00000000000000000000000000000100)
+
+State 114 file harnessbad.c line 19 function main thread 0
+----------------------------------------------------
+  choice=1 (00000000000000000000000000000001)
+
+State 115 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=0 (00000000000000000000000000000000)
+
+State 116 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=523440 (00000000000001111111110010110000)
+LOG: Choice is 1
+
+State 122 file harnessbad.c line 33 function main thread 0
+----------------------------------------------------
+  add_item=523440 (00000000000001111111110010110000)
+
+State 124 file harnessbad.c line 60 function insert thread 0
+----------------------------------------------------
+  i=0 (00000000000000000000000000000000)
+
+State 126 file harnessbad.c line 62 function insert thread 0
+----------------------------------------------------
+  queue_array[5]=523440 (00000000000001111111110010110000)
+
+State 127 file harnessbad.c line 63 function insert thread 0
+----------------------------------------------------
+  rear=6 (00000000000000000000000000000110)
+LOG: Element Inserted in 6 is 523440
+
+State 132 file harnessbad.c line 15 function main thread 0
+----------------------------------------------------
+  i=5 (00000000000000000000000000000101)
+
+State 136 file harnessbad.c line 19 function main thread 0
+----------------------------------------------------
+  choice=1 (00000000000000000000000000000001)
+
+State 137 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=0 (00000000000000000000000000000000)
+
+State 138 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=524440 (00000000000010000000000010011000)
+LOG: Choice is 1
+
+State 144 file harnessbad.c line 33 function main thread 0
+----------------------------------------------------
+  add_item=524440 (00000000000010000000000010011000)
+
+State 146 file harnessbad.c line 60 function insert thread 0
+----------------------------------------------------
+  i=0 (00000000000000000000000000000000)
+
+State 148 file harnessbad.c line 62 function insert thread 0
+----------------------------------------------------
+  queue_array[6]=524440 (00000000000010000000000010011000)
+
+State 149 file harnessbad.c line 63 function insert thread 0
+----------------------------------------------------
+  rear=7 (00000000000000000000000000000111)
+LOG: Element Inserted in 7 is 524440
+
+State 154 file harnessbad.c line 15 function main thread 0
+----------------------------------------------------
+  i=6 (00000000000000000000000000000110)
+
+State 158 file harnessbad.c line 19 function main thread 0
+----------------------------------------------------
+  choice=1 (00000000000000000000000000000001)
+
+State 159 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=0 (00000000000000000000000000000000)
+
+State 160 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=525440 (00000000000010000000010010000000)
+LOG: Choice is 1
+
+State 166 file harnessbad.c line 33 function main thread 0
+----------------------------------------------------
+  add_item=525440 (00000000000010000000010010000000)
+
+State 168 file harnessbad.c line 60 function insert thread 0
+----------------------------------------------------
+  i=0 (00000000000000000000000000000000)
+
+State 170 file harnessbad.c line 62 function insert thread 0
+----------------------------------------------------
+  queue_array[7]=525440 (00000000000010000000010010000000)
+
+State 171 file harnessbad.c line 63 function insert thread 0
+----------------------------------------------------
+  rear=8 (00000000000000000000000000001000)
+LOG: Element Inserted in 8 is 525440
+
+State 176 file harnessbad.c line 15 function main thread 0
+----------------------------------------------------
+  i=7 (00000000000000000000000000000111)
+
+State 180 file harnessbad.c line 19 function main thread 0
+----------------------------------------------------
+  choice=1 (00000000000000000000000000000001)
+
+State 181 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=0 (00000000000000000000000000000000)
+
+State 182 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=526440 (00000000000010000000100001101000)
+LOG: Choice is 1
+
+State 188 file harnessbad.c line 33 function main thread 0
+----------------------------------------------------
+  add_item=526440 (00000000000010000000100001101000)
+
+State 190 file harnessbad.c line 60 function insert thread 0
+----------------------------------------------------
+  i=0 (00000000000000000000000000000000)
+
+State 192 file harnessbad.c line 62 function insert thread 0
+----------------------------------------------------
+  queue_array[8]=526440 (00000000000010000000100001101000)
+
+State 193 file harnessbad.c line 63 function insert thread 0
+----------------------------------------------------
+  rear=9 (00000000000000000000000000001001)
+LOG: Element Inserted in 9 is 526440
+
+State 198 file harnessbad.c line 15 function main thread 0
+----------------------------------------------------
+  i=8 (00000000000000000000000000001000)
+
+State 202 file harnessbad.c line 19 function main thread 0
+----------------------------------------------------
+  choice=1 (00000000000000000000000000000001)
+
+State 203 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=0 (00000000000000000000000000000000)
+
+State 204 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=527440 (00000000000010000000110001010000)
+LOG: Choice is 1
+
+State 210 file harnessbad.c line 33 function main thread 0
+----------------------------------------------------
+  add_item=527440 (00000000000010000000110001010000)
+
+State 212 file harnessbad.c line 60 function insert thread 0
+----------------------------------------------------
+  i=0 (00000000000000000000000000000000)
+
+State 214 file harnessbad.c line 62 function insert thread 0
+----------------------------------------------------
+  queue_array[9]=527440 (00000000000010000000110001010000)
+
+State 215 file harnessbad.c line 63 function insert thread 0
+----------------------------------------------------
+  rear=10 (00000000000000000000000000001010)
+LOG: Element Inserted in 10 is 527440
+
+State 220 file harnessbad.c line 15 function main thread 0
+----------------------------------------------------
+  i=9 (00000000000000000000000000001001)
+
+State 224 file harnessbad.c line 19 function main thread 0
+----------------------------------------------------
+  choice=1 (00000000000000000000000000000001)
+
+State 225 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=0 (00000000000000000000000000000000)
+
+State 226 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=528440 (00000000000010000001000000111000)
+LOG: Choice is 1
+
+State 232 file harnessbad.c line 33 function main thread 0
+----------------------------------------------------
+  add_item=528440 (00000000000010000001000000111000)
+
+State 234 file harnessbad.c line 60 function insert thread 0
+----------------------------------------------------
+  i=0 (00000000000000000000000000000000)
+
+State 236 file harnessbad.c line 62 function insert thread 0
+----------------------------------------------------
+  queue_array[10]=528440 (00000000000010000001000000111000)
+
+State 237 file harnessbad.c line 63 function insert thread 0
+----------------------------------------------------
+  rear=11 (00000000000000000000000000001011)
+LOG: Element Inserted in 11 is 528440
+
+State 242 file harnessbad.c line 15 function main thread 0
+----------------------------------------------------
+  i=10 (00000000000000000000000000001010)
+
+State 246 file harnessbad.c line 19 function main thread 0
+----------------------------------------------------
+  choice=1 (00000000000000000000000000000001)
+
+State 247 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=0 (00000000000000000000000000000000)
+
+State 248 file harnessbad.c line 20 function main thread 0
+----------------------------------------------------
+  input=529440 (00000000000010000001010000100000)
+LOG: Choice is 1
+
+State 254 file harnessbad.c line 33 function main thread 0
+----------------------------------------------------
+  add_item=529440 (00000000000010000001010000100000)
+
+State 256 file harnessbad.c line 60 function insert thread 0
+----------------------------------------------------
+  i=0 (00000000000000000000000000000000)
+
+Violated property:
+  file harnessbad.c line 61 function insert
+  assertion
+  rear <= 10
+
+VERIFICATION FAILED

@@ -12,18 +12,6 @@ long dist[GRAPHSIZE][GRAPHSIZE]; /* dist[i][j] is the distance between node i an
 long d[GRAPHSIZE]; /* d[i] is the length of the shortest path between the source (s) and node i */
 int prev[GRAPHSIZE]; /* prev[i] is the node that comes right before i in the shortest path from the source to i*/
 
-void printD() {
-	int i;
-
-	printf("Distances:\n");
-	for (i = 1; i <= nodeCount; ++i)
-		printf("%10d", i);
-	printf("\n");
-	for (i = 1; i <= nodeCount; ++i) {
-		printf("%10ld", d[i]);
-	}
-	printf("\n");
-}
 
 /*
  * Prints the shortest path from the source to dest.
@@ -50,9 +38,6 @@ void checkPath(int dest, int source) {
 	}
 	assert(v == source);
 	assert(shortestPathCost == traversalCost);
-	if (v == source) {
-		printf("%d", source);
-	}
 }
 
 int nondet_int();

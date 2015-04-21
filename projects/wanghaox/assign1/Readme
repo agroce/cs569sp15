@@ -1,0 +1,5 @@
+heapsort.h    ->  the headfile for the heap sort
+heapsort.c    ->  the source file of heap sort that can be compiled with harness.c successfully
+badheapsort.c ->  the buggy version of heapsort.c
+harness.c     ->  the harness used to compile with heapsort.c/badheapsort.c to find bugs
+write-up.txt  ->  the write up for the assignment#1
