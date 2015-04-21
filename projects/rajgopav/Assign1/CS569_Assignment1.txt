@@ -1,5 +1,5 @@
 Varun Rajgopal (rajgopav@onid.oregonstate.edu)
-Course: CS-569
+Course: CS-569 Static Analysis and model checking
 Assignment 1
 
 Merge Sort Technique:
