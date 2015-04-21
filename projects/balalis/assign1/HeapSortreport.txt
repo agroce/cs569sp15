@@ -34,6 +34,11 @@ We can see that the increase in the DSIZE and unwind value will increase the CBM
 However, when the bounds check and pointer check is not used, the CBMC runtime will decrease and the number of variables and clauses 
 which CBMC checks also decreases.
 
+# The ability of the harness to find the bugs you introduced
+The harness works well in finding the bugs I introduced, as an example I changed some conditions such as changing the condition
+“for (k=1;k<n;k++)” to “for (k=1;k<=n;k++)” in heapify function, and the harness could recognize the bugs.
+
+
 
 
 
