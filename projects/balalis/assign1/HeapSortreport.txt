@@ -1,5 +1,29 @@
+#Assignment1 report
+
+# Was the program correct or buggy?  
+I chose Heap sort code as my base code. Heap sort code consists of three main functions: heapsort(int a[],int n),
+heapify(int a[],int n) and adjust(int a[],int n).I used the harness code to check whether the heapsort program, 
+is correct or buggy.CBMC confirmed that the Heap sort program was correct by using the mentioned harness.
+The harness checks whether the array which we want to sort is the permutation of the array that the heapsort function returns.
+Then it checks whether the number of occurrence of the values in the array after and before sorting are the same or not. 
+Therefore, it can decide whether the heap sort program is working well or not.
+In order to check whether the harness can find the bugs in the code, I defined a bug in the code and I changed the condition
+“for (k=1;k<n;k++)” to “for (k=1;k<=n;k++)” in heapify function. And the harness could recognize this bug. Its related output,
+which is "unsuccessfulOutput" is submitted in the "unsuccessful" directory .
+
+#What was hard to specify?  Was there functionality you could not specify?
+For me, it was hard to specify the some other needed functionalities for harnesses for different sort algorithms.
+It is obvious that the functionality of all sort algorithms are somehow similar. However, recognizing the differences among 
+them is difficult. 
+Overall, I believe that the harness could satisfy most of the needed functionalities.
+
+#CBMC Runtime Result
+When the verificatin is successful, for DSIZE = 2  and unwind = 4, with bounds check and pointer check, the
+verification takes about 0.339 seconds. For the same parameters but without bounds check and
+pointer check the verification took approximately 0.305 seconds.
+
+When the verificatin is successful,for DSIZE = 3 and unwind = 6, with bounds check and pointer check, the
+verification takes about 1.314 seconds. For the same parameters but without bounds check and
+pointer check the verification took approximately 1.201 seconds.
 
 
-I chose Heap sort code as my base code. Heap sort code consists of three main functions: heapsort(int a[],int n), heapify(int a[],int n) and adjust(int a[],int n).
-I used the harness code to check whether the heapsort program, is correct or buggy.  CBMC confirmed that the Heap sort program was correct by using the mentioned harness.
-In order to check whether the harness can find the bugs in the code, I defined a bug in the code and I changed the condition “for (k=1;k<n;k++)” to “for (k=1;k<=n;k++)” in heapify function. And the harness could recognize this bug. Its output is attached .
