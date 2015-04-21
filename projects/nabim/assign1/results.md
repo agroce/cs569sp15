@@ -20,6 +20,7 @@ verify the code.
 Next, I also asserted the following:
 - cost of actually traversing the path is equal to the cost reported by the algorithm
 
+## What I was not able to specify
 However, I was not able to think of a way to assert the correctness of the "shortest" property of the
 path reported by the C program i.e. a way to verify whether the C program was actually returning the
 shortest path.
