@@ -42,3 +42,35 @@ Without bound-check and pointer check=Runtime decision procedure: 173.9s
 With Bound-check=Runtime decision procedure: 189.615s
 
 With Pointer Check=Runtime decision procedure: 188.322s
+
+--all-claims statement
+cbmc badharness.c badmysort.c -DSIZE=3 --unwind 8 --all-claims
+Results:
+size of program expression: 2736 steps
+simple slicing removed 3 assignments
+Generated 22 VCC(s), 22 remaining after simplification
+Passing problem to propositional reduction
+Running propositional reduction
+Solving with MiniSAT 2.2.0 without simplifier
+226390 variables, 758362 clauses
+SAT checker: negated claim is UNSATISFIABLE, i.e., holds
+Runtime decision procedure: 8.341s
+
+** Results:
+[1] unwinding assertion loop 0: OK
+[8] unwinding assertion loop 3: OK
+[2] unwinding assertion loop 1: OK
+[3] unwinding assertion loop 2: OK
+[4] unwinding assertion loop 3: OK
+[5] unwinding assertion loop 3: OK
+[6] unwinding assertion loop 3: OK
+[7] unwinding assertion loop 3: OK
+[9] unwinding assertion loop 3: OK
+[10] unwinding assertion loop 3: OK
+[11] unwinding assertion loop 3: OK
+[12] unwinding assertion loop 4: OK
+[13] unwinding assertion loop 1: OK
+[main.1] : OK
+[main.2] : OK
+
+
