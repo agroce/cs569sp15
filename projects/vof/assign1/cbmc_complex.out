@@ -1,0 +1,559 @@
+file threading_complex.c: Parsing
+Converting
+Type-checking threading_complex
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+**** WARNING: no body for function c::srand
+**** WARNING: no body for function c::pthread_barrier_init
+**** WARNING: no body for function c::pthread_cancel
+**** WARNING: no body for function c::pthread_barrier_wait
+Unwinding loop 1:c::updateDeer.0 iteration 1 file threading_complex.c line 140 function updateDeer thread 1
+Unwinding loop 1:c::updateDeer.0 iteration 2 file threading_complex.c line 140 function updateDeer thread 1
+**** WARNING: no body for function c::pow
+**** WARNING: no body for function c::exp
+Unwinding loop 2:c::updateGrain.0 iteration 1 file threading_complex.c line 80 function updateGrain thread 2
+Unwinding loop 2:c::updateGrain.0 iteration 2 file threading_complex.c line 80 function updateGrain thread 2
+Unwinding loop 3:c::updateInvasive.0 iteration 1 file threading_complex.c line 117 function updateInvasive thread 3
+Unwinding loop 3:c::updateInvasive.0 iteration 2 file threading_complex.c line 117 function updateInvasive thread 3
+**** WARNING: no body for function c::rand
+Unwinding loop 4:c::watcher.0 iteration 1 file threading_complex.c line 176 function watcher thread 4
+Unwinding loop 4:c::watcher.0 iteration 2 file threading_complex.c line 176 function watcher thread 4
+Adding SC constraints
+size of program expression: 2236 steps
+no slicing due to threads
+Generated 5 VCC(s), 5 remaining after simplification
+Passing problem to propositional reduction
+Running propositional reduction
+Solving with MiniSAT 2.2.0 with simplifier
+492635 variables, 2775319 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Runtime decision procedure: 376.272s
+Building error trace
+
+Counterexample:
+
+State 3 file <built-in-additions> line 22 thread 0
+----------------------------------------------------
+  __CPROVER_threads_exited={ [4l]=FALSE } (?)
+
+State 4 file <built-in-additions> line 23 thread 0
+----------------------------------------------------
+  __CPROVER_next_thread_id=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 5 file <built-in-additions> line 30 thread 0
+----------------------------------------------------
+  __CPROVER_deallocated=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 6 file <built-in-additions> line 31 thread 0
+----------------------------------------------------
+  __CPROVER_malloc_object=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 7 file <built-in-additions> line 32 thread 0
+----------------------------------------------------
+  __CPROVER_malloc_size=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 8 file <built-in-additions> line 33 thread 0
+----------------------------------------------------
+  __CPROVER_malloc_is_new_array=FALSE (0)
+
+State 9 file <built-in-additions> line 45 thread 0
+----------------------------------------------------
+  __CPROVER_rounding_mode=0 (00000000000000000000000000000000)
+
+State 10 file <built-in-additions> line 66 thread 0
+----------------------------------------------------
+  __CPROVER_pipe_count=0u (00000000000000000000000000000000)
+
+State 11 file threading_complex.c line 10 thread 0
+----------------------------------------------------
+  counter=0 (00000000000000000000000000000000)
+
+State 12 file threading_complex.c line 12 thread 0
+----------------------------------------------------
+  deerThread=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 13 file threading_complex.c line 13 thread 0
+----------------------------------------------------
+  grainThread=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 14 file threading_complex.c line 14 thread 0
+----------------------------------------------------
+  invasiveThread=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 15 file threading_complex.c line 15 thread 0
+----------------------------------------------------
+  watchThread=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 16 file threading_complex.c line 17 thread 0
+----------------------------------------------------
+  doneComputingBarrier={ .__size={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 17 file threading_complex.c line 18 thread 0
+----------------------------------------------------
+  doneAssigningBarrier={ .__size={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 18 file threading_complex.c line 19 thread 0
+----------------------------------------------------
+  donePrintingBarrier={ .__size={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 19 file threading_complex.c line 21 thread 0
+----------------------------------------------------
+  NowYear=0 (00000000000000000000000000000000)
+
+State 20 file threading_complex.c line 22 thread 0
+----------------------------------------------------
+  NowMonth=0 (00000000000000000000000000000000)
+
+State 21 file threading_complex.c line 24 thread 0
+----------------------------------------------------
+  NowPrecip=0.000000f (00000000000000000000000000000000)
+
+State 22 file threading_complex.c line 25 thread 0
+----------------------------------------------------
+  NowTemp=0.000000f (00000000000000000000000000000000)
+
+State 23 file threading_complex.c line 26 thread 0
+----------------------------------------------------
+  NowHeight=0.000000f (00000000000000000000000000000000)
+
+State 24 file threading_complex.c line 27 thread 0
+----------------------------------------------------
+  NowNumDeer=0 (00000000000000000000000000000000)
+
+State 25 file threading_complex.c line 28 thread 0
+----------------------------------------------------
+  NowNumGrain=0.000000f (00000000000000000000000000000000)
+
+State 26 file threading_complex.c line 29 thread 0
+----------------------------------------------------
+  NowNumInvasive=0.000000f (00000000000000000000000000000000)
+
+State 27 file threading_complex.c line 30 thread 0
+----------------------------------------------------
+  lastPrecipFactor=0.000000f (00000000000000000000000000000000)
+
+State 28 file threading_complex.c line 31 thread 0
+----------------------------------------------------
+  lastTempFactor=0.000000f (00000000000000000000000000000000)
+
+State 29 file threading_complex.c line 32 thread 0
+----------------------------------------------------
+  precipFactor=0.000000f (00000000000000000000000000000000)
+
+State 30 file threading_complex.c line 33 thread 0
+----------------------------------------------------
+  tempFactor=0.000000f (00000000000000000000000000000000)
+
+State 31 file threading_complex.c line 37 thread 0
+----------------------------------------------------
+  GRAIN_GROWS_PER_MONTH=8.000000f (01000001000000000000000000000000)
+
+State 32 file threading_complex.c line 38 thread 0
+----------------------------------------------------
+  ONE_DEER_EATS_PER_MONTH=0.500000f (00111111000000000000000000000000)
+
+State 33 file threading_complex.c line 40 thread 0
+----------------------------------------------------
+  ONE_DEER_PRODUCE_PER_MONTH=0.120000f (00111101111101011100001010001111)
+
+State 34 file threading_complex.c line 41 thread 0
+----------------------------------------------------
+  RANDOM_DEER=0.150000f (00111110000110011001100110011010)
+
+State 35 file threading_complex.c line 44 thread 0
+----------------------------------------------------
+  ONE_GRAIN_PRODUCE_PER_MONTH=1.020000f (00111111100000101000111101011100)
+
+State 36 file threading_complex.c line 45 thread 0
+----------------------------------------------------
+  RANDOM_GRAIN=0.150000f (00111110000110011001100110011010)
+
+State 37 file threading_complex.c line 47 thread 0
+----------------------------------------------------
+  AVG_PRECIP_PER_MONTH=6.000000f (01000000110000000000000000000000)
+
+State 38 file threading_complex.c line 48 thread 0
+----------------------------------------------------
+  AMP_PRECIP_PER_MONTH=6.000000f (01000000110000000000000000000000)
+
+State 39 file threading_complex.c line 49 thread 0
+----------------------------------------------------
+  RANDOM_PRECIP=2.000000f (01000000000000000000000000000000)
+
+State 40 file threading_complex.c line 51 thread 0
+----------------------------------------------------
+  AVG_TEMP=50.000000f (01000010010010000000000000000000)
+
+State 41 file threading_complex.c line 52 thread 0
+----------------------------------------------------
+  AMP_TEMP=20.000000f (01000001101000000000000000000000)
+
+State 42 file threading_complex.c line 53 thread 0
+----------------------------------------------------
+  RANDOM_TEMP=10.000000f (01000001001000000000000000000000)
+
+State 43 file threading_complex.c line 55 thread 0
+----------------------------------------------------
+  MIDTEMP=40.000000f (01000010001000000000000000000000)
+
+State 44 file threading_complex.c line 56 thread 0
+----------------------------------------------------
+  MIDPRECIP=10.000000f (01000001001000000000000000000000)
+
+State 48  thread 0
+----------------------------------------------------
+  argv'[16384]=irep("(\"nil\")")[16384] (?)
+
+State 51  thread 0
+----------------------------------------------------
+  argc=16384 (00000000000000000100000000000000)
+
+State 52  thread 0
+----------------------------------------------------
+  argv=argv' (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 53 file threading_complex.c line 195 function main thread 0
+----------------------------------------------------
+  NowNumDeer=1 (00000000000000000000000000000001)
+
+State 54 file threading_complex.c line 197 function main thread 0
+----------------------------------------------------
+  NowNumGrain=1.000000f (00111111100000000000000000000000)
+
+State 55 file threading_complex.c line 198 function main thread 0
+----------------------------------------------------
+  NowNumInvasive=1.000000f (00111111100000000000000000000000)
+
+State 56 file threading_complex.c line 201 function main thread 0
+----------------------------------------------------
+  counter=0 (00000000000000000000000000000000)
+
+State 57 file threading_complex.c line 203 function main thread 0
+----------------------------------------------------
+  NowMonth=11 (00000000000000000000000000001011)
+
+State 58 file threading_complex.c line 204 function main thread 0
+----------------------------------------------------
+  NowYear=2014 (00000000000000000000011111011110)
+
+State 71 file threading_complex.c line 213 function main thread 0
+----------------------------------------------------
+  Arg=0 (00000000000000000000000000000000)
+
+State 72 file threading_complex.c line 213 function main thread 0
+----------------------------------------------------
+  Arg=0 (00000000000000000000000000000000)
+
+State 75 file threading_complex.c line 214 function main thread 0
+----------------------------------------------------
+  thread=&deerThread (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 76 file threading_complex.c line 214 function main thread 0
+----------------------------------------------------
+  attr=((union pthread_attr_t *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 77 file threading_complex.c line 214 function main thread 0
+----------------------------------------------------
+  start_routine=updateDeer (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 78 file threading_complex.c line 214 function main thread 0
+----------------------------------------------------
+  arg=&Arg!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 79 file <builtin-library>-pthread_create line 31 function pthread_create thread 0
+----------------------------------------------------
+  this_thread_id=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 80 file <builtin-library>-pthread_create line 33 function pthread_create thread 0
+----------------------------------------------------
+  __CPROVER_next_thread_id=1ul (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 81 file <builtin-library>-pthread_create line 33 function pthread_create thread 0
+----------------------------------------------------
+  this_thread_id=1ul (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 83 file <builtin-library>-pthread_create line 42 function pthread_create thread 0
+----------------------------------------------------
+  deerThread=1ul (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 87 file <builtin-library>-pthread_create line 47 function pthread_create thread 0
+----------------------------------------------------
+  start_routine=updateDeer (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 88 file <builtin-library>-pthread_create line 47 function pthread_create thread 0
+----------------------------------------------------
+  arg=&Arg!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 89 file <builtin-library>-pthread_create line 47 function pthread_create thread 0
+----------------------------------------------------
+  id=1ul (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 99 file threading_complex.c line 215 function main thread 0
+----------------------------------------------------
+  thread=&grainThread (0000011000000000000000000000000000000000000000000000000000000000)
+
+State 100 file threading_complex.c line 215 function main thread 0
+----------------------------------------------------
+  attr=((union pthread_attr_t *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 101 file threading_complex.c line 215 function main thread 0
+----------------------------------------------------
+  start_routine=updateGrain (0000011100000000000000000000000000000000000000000000000000000000)
+
+State 102 file threading_complex.c line 215 function main thread 0
+----------------------------------------------------
+  arg=&Arg!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 103 file <builtin-library>-pthread_create line 31 function pthread_create thread 0
+----------------------------------------------------
+  this_thread_id=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 104 file <builtin-library>-pthread_create line 33 function pthread_create thread 0
+----------------------------------------------------
+  __CPROVER_next_thread_id=2ul (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 105 file <builtin-library>-pthread_create line 33 function pthread_create thread 0
+----------------------------------------------------
+  this_thread_id=2ul (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 107 file <builtin-library>-pthread_create line 42 function pthread_create thread 0
+----------------------------------------------------
+  grainThread=2ul (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 111 file <builtin-library>-pthread_create line 47 function pthread_create thread 0
+----------------------------------------------------
+  start_routine=updateGrain (0000011100000000000000000000000000000000000000000000000000000000)
+
+State 112 file <builtin-library>-pthread_create line 47 function pthread_create thread 0
+----------------------------------------------------
+  arg=&Arg!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 113 file <builtin-library>-pthread_create line 47 function pthread_create thread 0
+----------------------------------------------------
+  id=2ul (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 123 file threading_complex.c line 216 function main thread 0
+----------------------------------------------------
+  thread=&invasiveThread (0000100000000000000000000000000000000000000000000000000000000000)
+
+State 124 file threading_complex.c line 216 function main thread 0
+----------------------------------------------------
+  attr=((union pthread_attr_t *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 125 file threading_complex.c line 216 function main thread 0
+----------------------------------------------------
+  start_routine=updateInvasive (0000100100000000000000000000000000000000000000000000000000000000)
+
+State 126 file threading_complex.c line 216 function main thread 0
+----------------------------------------------------
+  arg=&Arg!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 127 file <builtin-library>-pthread_create line 31 function pthread_create thread 0
+----------------------------------------------------
+  this_thread_id=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 128 file <builtin-library>-pthread_create line 33 function pthread_create thread 0
+----------------------------------------------------
+  __CPROVER_next_thread_id=3ul (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 129 file <builtin-library>-pthread_create line 33 function pthread_create thread 0
+----------------------------------------------------
+  this_thread_id=3ul (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 131 file <builtin-library>-pthread_create line 42 function pthread_create thread 0
+----------------------------------------------------
+  invasiveThread=3ul (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 135 file <builtin-library>-pthread_create line 47 function pthread_create thread 0
+----------------------------------------------------
+  start_routine=updateInvasive (0000100100000000000000000000000000000000000000000000000000000000)
+
+State 136 file <builtin-library>-pthread_create line 47 function pthread_create thread 0
+----------------------------------------------------
+  arg=&Arg!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 137 file <builtin-library>-pthread_create line 47 function pthread_create thread 0
+----------------------------------------------------
+  id=3ul (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 147 file threading_complex.c line 217 function main thread 0
+----------------------------------------------------
+  thread=&watchThread (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 148 file threading_complex.c line 217 function main thread 0
+----------------------------------------------------
+  attr=((union pthread_attr_t *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 149 file threading_complex.c line 217 function main thread 0
+----------------------------------------------------
+  start_routine=watcher (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 150 file threading_complex.c line 217 function main thread 0
+----------------------------------------------------
+  arg=&Arg!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 151 file <builtin-library>-pthread_create line 31 function pthread_create thread 0
+----------------------------------------------------
+  this_thread_id=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 152 file threading_complex.c line 89 function updateGrain thread 2
+----------------------------------------------------
+  precipFactor=+NaN (01111111100000000000000000000001)
+
+State 153 file threading_complex.c line 91 function updateGrain thread 2
+----------------------------------------------------
+  tempNumGrain=0.000000f (00000000000000000000000000000000)
+
+State 154 file threading_complex.c line 121 function updateInvasive thread 3
+----------------------------------------------------
+  precipFactor=44696319557632.000000f (01010110001000101001101010110001)
+
+State 155 file threading_complex.c line 123 function updateInvasive thread 3
+----------------------------------------------------
+  tempNumInvasive=0 (00000000000000000000000000000000)
+
+State 156 file threading_complex.c line 91 function updateGrain thread 2
+----------------------------------------------------
+  tempNumGrain=+NaN (01111111100000000000000000000001)
+
+State 161 file threading_complex.c line 123 function updateInvasive thread 3
+----------------------------------------------------
+  tempNumInvasive=255013683 (00001111001100110011001100110011)
+
+State 166 file threading_complex.c line 106 function updateGrain thread 2
+----------------------------------------------------
+  NowNumGrain=+NaN (01111111100000000000000000000001)
+
+State 175 file threading_complex.c line 86 function updateGrain thread 2
+----------------------------------------------------
+  tempFactor=0.000000f (00000000000000000000000000000000)
+
+State 176 file threading_complex.c line 86 function updateGrain thread 2
+----------------------------------------------------
+  return_value_pow$1=0.000000 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 180 file threading_complex.c line 86 function updateGrain thread 2
+----------------------------------------------------
+  return_value_pow$1=0.000000 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 181 file threading_complex.c line 86 function updateGrain thread 2
+----------------------------------------------------
+  return_value_exp$2=0.000000 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 185 file threading_complex.c line 86 function updateGrain thread 2
+----------------------------------------------------
+  return_value_exp$2=0.000000 (0011100100000001101000000000000000100000000000000000000000000001)
+
+State 186 file threading_complex.c line 86 function updateGrain thread 2
+----------------------------------------------------
+  tempFactor=0.000000f (00001000000011010000000000000001)
+
+State 187 file threading_complex.c line 87 function updateGrain thread 2
+----------------------------------------------------
+  precipFactor=0.000000f (00000000000000000000000000000000)
+
+State 188 file threading_complex.c line 87 function updateGrain thread 2
+----------------------------------------------------
+  return_value_pow$3=0.000000 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 192 file threading_complex.c line 87 function updateGrain thread 2
+----------------------------------------------------
+  return_value_pow$3=0.000000 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 193 file threading_complex.c line 87 function updateGrain thread 2
+----------------------------------------------------
+  return_value_exp$4=0.000000 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 197 file threading_complex.c line 87 function updateGrain thread 2
+----------------------------------------------------
+  return_value_exp$4=0.000000 (0011100011110000000000100000000000000000000000000000000000000101)
+
+State 198 file threading_complex.c line 87 function updateGrain thread 2
+----------------------------------------------------
+  precipFactor=0.000000f (00000111100000000001000000000000)
+
+State 199 file threading_complex.c line 132 function updateInvasive thread 3
+----------------------------------------------------
+  NowNumInvasive=255013680.000000f (01001101011100110011001100110011)
+
+State 208 file threading_complex.c line 119 function updateInvasive thread 3
+----------------------------------------------------
+  precipFactor=0.000000f (00000000000000000000000000000000)
+
+State 209 file threading_complex.c line 119 function updateInvasive thread 3
+----------------------------------------------------
+  return_value_pow$1=0.000000 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 213 file threading_complex.c line 119 function updateInvasive thread 3
+----------------------------------------------------
+  return_value_pow$1=0.000000 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 214 file threading_complex.c line 119 function updateInvasive thread 3
+----------------------------------------------------
+  return_value_exp$2=0.000000 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 218 file threading_complex.c line 119 function updateInvasive thread 3
+----------------------------------------------------
+  return_value_exp$2=0.000000 (0011101100101100010000000000000000000011000000110000000000000000)
+
+State 219 file threading_complex.c line 119 function updateInvasive thread 3
+----------------------------------------------------
+  precipFactor=0.000000f (00011001011000100000000000000000)
+
+State 220 file threading_complex.c line 89 function updateGrain thread 2
+----------------------------------------------------
+  precipFactor=+NaN (01111111100000000000000000000001)
+
+State 221 file threading_complex.c line 91 function updateGrain thread 2
+----------------------------------------------------
+  tempNumGrain=0.000000f (00000000000000000000000000000000)
+
+State 222 file threading_complex.c line 142 function updateDeer thread 1
+----------------------------------------------------
+  foodSupply=85004560.000000f (01001100101000100010001000100010)
+
+State 223 file threading_complex.c line 143 function updateDeer thread 1
+----------------------------------------------------
+  tempNumDeer=0.000000f (00000000000000000000000000000000)
+
+State 224 file threading_complex.c line 143 function updateDeer thread 1
+----------------------------------------------------
+  tempNumDeer=1.000000f (00111111100000000000000000000000)
+
+State 226 file threading_complex.c line 150 function updateDeer thread 1
+----------------------------------------------------
+  tempNumDeer=9444953.000000f (01001011000100000001111001011001)
+
+State 231 file threading_complex.c line 121 function updateInvasive thread 3
+----------------------------------------------------
+  precipFactor=+NaN (01111111100000000000000000000001)
+
+State 232 file threading_complex.c line 123 function updateInvasive thread 3
+----------------------------------------------------
+  tempNumInvasive=0 (00000000000000000000000000000000)
+
+State 233 file threading_complex.c line 91 function updateGrain thread 2
+----------------------------------------------------
+  tempNumGrain=+NaN (01111111100000000000000000000001)
+
+State 238 file threading_complex.c line 160 function updateDeer thread 1
+----------------------------------------------------
+  NowNumDeer=9444953 (00000000100100000001111001011001)
+
+State 247 file threading_complex.c line 142 function updateDeer thread 1
+----------------------------------------------------
+  foodSupply=0.000000f (00000000000000000000000000000000)
+
+State 248 file threading_complex.c line 106 function updateGrain thread 2
+----------------------------------------------------
+  NowNumGrain=+NaN (01111111100000000000000000000001)
+
+Violated property:
+  file threading_complex.c line 80 function updateGrain
+  unwinding assertion loop 0
+
+VERIFICATION FAILED
