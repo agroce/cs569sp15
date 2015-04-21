@@ -19,11 +19,21 @@ Overall, I believe that the harness could satisfy most of the needed functionali
 
 #CBMC Runtime Result
 When the verificatin is successful, for DSIZE = 2  and unwind = 4, with bounds check and pointer check, the
-verification takes about 0.339 seconds. For the same parameters but without bounds check and
-pointer check the verification took approximately 0.305 seconds.
+CBMC runtime is about 0.339 seconds (and it checks 45306 variables, 138886 clauses). For the same parameters but without bounds check and
+pointer check the verification took approximately 0.305 seconds (it checks 39021 variables, 120352 clauses).
 
 When the verificatin is successful,for DSIZE = 3 and unwind = 6, with bounds check and pointer check, the
-verification takes about 1.314 seconds. For the same parameters but without bounds check and
-pointer check the verification took approximately 1.201 seconds.
+CBMC runtime is about 1.314 seconds (it checks 102462 variables, 331199 clauses). For the same parameters but without bounds check and
+pointer check the verification took approximately 1.201 seconds (it checks 86627 variables, 284339 clauses).
+
+When the verificatin is successful,for DSIZE = 4 and unwind = 8, with bounds check and pointer check, the
+CBMC runtime is about 7.936 seconds (it checks 193683 variables, 651151 clauses). For the same parameters but without bounds check and
+pointer check the verification took approximately 6.216 seconds ( it checks 162115 variables, 556889 clauses).
+
+We can see that the increase in the DSIZE and unwind value will increase the CBMC runtime. 
+However, when the bounds check and pointer check is not used, the CBMC runtime will decrease and the number of variables and clauses 
+which CBMC checks also decreases.
+
+
 
 
