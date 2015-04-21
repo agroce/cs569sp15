@@ -1,0 +1,76 @@
+Prathamesh Pramod Patkar (patkarp@onid.oregonstate.edu)
+CS-569
+Dr.Alex Groce
+
+Assignment 1
+
+As a part of Assignment 1 in CS-569 I have performed testing on Heap Sorting techniques.
+
+Summary of Heap Sort:
+A heap sort is a comparison based sorting algorithm and uses heap data structure, in which it divides its input into sorted and unsorted region and it iteratively shrinks the unsorted region by extracting the largest element  and moving that to sorted region. It is similar to selection sort technique.
+
+Was the Program correct or buggy?
+Initially I verified functionality of the code “heap.c”(program to be tested) to check it working using normal compiler and then modified it to work with harness(named “mysort.c”).The Program “mysort.c” with “harness.c”(good harness) seems to be correct initially and worked perfectly when first executed using CBMC, but later it was found out that Inner loop for sorting heap was buggy and still CBMC return verification successful. The program Inner loop was corrected later.
+
+Introducing BUGs?
+After the code was corrected, I intentionally introduced few bugs to verify the code running in file named “badmysort.h”, where the verification was successful.
+Line 36: for (j = size - 1; j > 0; j--)// ****** BUG 1 *** thing is bug introduced which wont take array [0], j=>1
+
+Line 64:if ((heap[c] < heap[c + 1]) && c < j) // ********BUG 2*******replace j-1 with j
+
+But it returned verification successful,even though the harness checked verified all the arrays element in the “badharness.c”
+
+Hard to Specify?
+It was hard to verify values in the heap, cause it returned lot of error and unwanted output before it returned acceptable results.
+
+Functionality I couldn't specify?
+I was not able to check performance of CBMC above result array size 10 and unwind 20 cause it took the long time to process output.
+
+How did turning on/off bounds and pointer checker affect cbmc runtime?
+
+DSIZE=3 and unwind =8
+Without bound-check and pointer check=Runtime decision procedure: 4.358s
+
+With Bound-check=Runtime decision procedure: 4.843s
+
+With Pointer Check=Runtime decision procedure: 4.405s
+
+
+DSIZE=5 and unwind =15
+Without bound-check and pointer check=Runtime decision procedure: 173.9s
+
+With Bound-check=Runtime decision procedure: 189.615s
+
+With Pointer Check=Runtime decision procedure: 188.322s
+
+--all-claims statement
+cbmc badharness.c badmysort.c -DSIZE=3 --unwind 8 --all-claims
+Results:
+size of program expression: 2736 steps
+simple slicing removed 3 assignments
+Generated 22 VCC(s), 22 remaining after simplification
+Passing problem to propositional reduction
+Running propositional reduction
+Solving with MiniSAT 2.2.0 without simplifier
+226390 variables, 758362 clauses
+SAT checker: negated claim is UNSATISFIABLE, i.e., holds
+Runtime decision procedure: 8.341s
+
+** Results:
+[1] unwinding assertion loop 0: OK
+[8] unwinding assertion loop 3: OK
+[2] unwinding assertion loop 1: OK
+[3] unwinding assertion loop 2: OK
+[4] unwinding assertion loop 3: OK
+[5] unwinding assertion loop 3: OK
+[6] unwinding assertion loop 3: OK
+[7] unwinding assertion loop 3: OK
+[9] unwinding assertion loop 3: OK
+[10] unwinding assertion loop 3: OK
+[11] unwinding assertion loop 3: OK
+[12] unwinding assertion loop 4: OK
+[13] unwinding assertion loop 1: OK
+[main.1] : OK
+[main.2] : OK
+
+

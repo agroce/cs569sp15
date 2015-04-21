@@ -1,0 +1,47 @@
+CBMC version 5.0 64-bit macos
+Parsing sut.c
+Converting
+Type-checking sut
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+Unwinding loop DeleteList.0 iteration 1 (5 max) file sut.c line 42 function DeleteList thread 0
+Unwinding loop DeleteList.0 iteration 2 (5 max) file sut.c line 42 function DeleteList thread 0
+Unwinding loop DeleteList.0 iteration 3 (5 max) file sut.c line 42 function DeleteList thread 0
+Unwinding loop DeleteList.0 iteration 4 (5 max) file sut.c line 42 function DeleteList thread 0
+Not unwinding loop DeleteList.0 iteration 5 (5 max) file sut.c line 42 function DeleteList thread 0
+size of program expression: 121 steps
+simple slicing removed 4 assignments
+Generated 29 VCC(s), 29 remaining after simplification
+Passing problem to propositional reduction
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.0 with simplifier
+51877 variables, 236026 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Runtime decision procedure: 0.448s
+Building error trace
+
+Counterexample:
+
+State 17 file sut.c line 30 thread 0
+----------------------------------------------------
+  L=INVALID (0000000100000000000000000000000000000000000000000000000000000000)
+
+State 18 file sut.c line 30 thread 0
+----------------------------------------------------
+  i=2147483647 (01111111111111111111111111111111)
+
+State 19 file sut.c line 32 function DeleteList thread 0
+----------------------------------------------------
+  j=0 (00000000000000000000000000000000)
+
+Violated property:
+  file sut.c line 34 function DeleteList
+  dereference failure: pointer invalid in *L
+  !INVALID-POINTER(L)
+
+VERIFICATION FAILED
