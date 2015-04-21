@@ -15,8 +15,8 @@ Operation is performed based on choice of the user:
 2. Deleting First in Queue Value.
 3. Displaying Current Queue.
 
-The [Good Harness Code](https://github.com/agroce/cs569sp15/blob/master/projects/subraman/Harness_Good.c) that I wrote for the Queue Verification [Verified Successfully](https://github.com/agroce/cs569sp15/blob/master/projects/subraman/Result_Good_WithNoBound.txt) without Bound/Pointer Check [Conditions](https://github.com/agroce/cs569sp15/blob/master/projects/subraman/Result_Good_WithBound.txt). 
-But it threw upper bound violations on front and rear pointer variables when those conditions were included. Thus I had to change the bounds before I could proceed further and CBMC was a lot friendly to me in that debugging task.
+The [Good Harness Code](https://github.com/agroce/cs569sp15/blob/master/projects/subraman/Harness_Good.c) that I wrote for the Queue Verification [Verified Successfully](https://github.com/agroce/cs569sp15/blob/master/projects/subraman/Result_Good_WithNoBound.txt) without Bound/Pointer Check Conditions. 
+But it threw upper bound violations on front and rear pointer variables when those conditions were included. Thus I had to change the bounds before I could proceed further and CBMC was a lot friendly to me in that debugging task.It finally helped me get [Verified Successfully]((https://github.com/agroce/cs569sp15/blob/master/projects/subraman/Result_Good_WithBound.txt).)
 
 Assertions and Assumptions:
 --------------------------
