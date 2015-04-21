@@ -1,5 +1,5 @@
 
 
-I used Heap sort code as my base code. Heap sort code consists of three main functions: heapsort(int a[],int n), heapify(int a[],int n) and adjust(int a[],int n).
+I chose Heap sort code as my base code. Heap sort code consists of three main functions: heapsort(int a[],int n), heapify(int a[],int n) and adjust(int a[],int n).
 I used the harness code to check whether the heapsort program, is correct or buggy.  CBMC confirmed that the Heap sort program was correct by using the mentioned harness.
 In order to check whether the harness can find the bugs in the code, I defined a bug in the code and I changed the condition “for (k=1;k<n;k++)” to “for (k=1;k<=n;k++)” in heapify function. And the harness could recognize this bug. Its output is attached .
