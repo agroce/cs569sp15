@@ -22,6 +22,7 @@ int main ()
     v = nondet_int();
     printf ("LOG: a[%d] = %d\n", i, v);
     heap[i] = v;
+    //counts frequency of heap[i] has the same value as val.
     if (v == val) 
     {
       refc++;
@@ -30,7 +31,7 @@ int main ()
 
   sort(heap,s); 
   printf ("LOG: sorted HEAP\n");
-
+//Verify whether arrays are sorted?
 
   if (s > 0) 
   {
@@ -60,7 +61,6 @@ int main ()
     heap[i] = nondet_unsigned_int();
     __CPROVER_assume(heap[i]>0 && heap[i]<=SIZE);
 
-//
   for(j=i+1;j<SIZE;j++)
     {
     __CPROVER_assume(heap[i]!=heap[j]);
