@@ -1,0 +1,47 @@
+Varun Rajgopal (rajgopav@onid.oregonstate.edu)
+Course: CS-569
+Assignment 1
+
+Merge Sort Technique:
+Merge sort is a recursive algorithm that continually splits a list in half. If the list is empty or has one item, it is sorted by definition. If the list has more than one item, we split the list and recursively invoke a merge sort on both halves. Once the two halves are sorted, the fundamental operation, called a merge, is performed. Merging is the process of taking two smaller sorted lists and combining them together into a single, sorted, new list.
+
+1.	Was the Program correct or buggy?
+Initially the functionality of the program mergesort.c was correct and it worked as expected with the harness. The results were as expected when it was first executed using CBMC. After the verification was successful, I introduced bugs to the program and executed it against the harness, still CBMC returned verification as successful.
+
+2.	Introducing BUG’s
+I introduced some bugs into the program. In the merge function of the mergesort.c file. I introduced a bug by replacing the size of the leftmost array with the size of the entire array. 
+
+while (i < l && j < n2)  // Where l is the size of the entire array 
+    {
+        if (L[i] <= R[j])
+        {
+            arr[k] = L[i];
+            i++;
+        }
+        else
+        {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+But it returned verification successful even though the harness checked and verified the entire arrays element.
+
+3.	What was hard to specify?
+Yes, It was hard to specify. The merge sort function recursively calls itself in order to sort all the elements in the given array and calls another function merge. The loops in the merge function are difficult to be verified.
+
+4.	Functionality I couldn't specify?
+No, I checked the performance of CBMC for array of SIZE 3 and the verification was successful. I didn’t check the functionality of the array beyond the above-mentioned size. Moreover with the counter examples provided by CBMC I was able to test and verify the functionality.
+
+5.	How did turning on/off bounds and pointer checker affect CBMC runtime?
+
+DSIZE=3 and unwind =8
+Without bound-check and pointer check=Runtime decision procedure: 3.47s
+With Bound-check=Runtime decision procedure: 3.743s
+With Pointer Check=Runtime decision procedure: 3.534s
+
+DSIZE=3 and unwind =15
+Without bound-check and pointer check=Runtime decision procedure: 20.3s
+With Bound-check=Runtime decision procedure: 24.9s
+With Pointer Check=Runtime decision procedure: 21.4s
