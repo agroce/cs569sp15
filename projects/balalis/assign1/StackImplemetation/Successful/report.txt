@@ -10,3 +10,5 @@ The stack implementation code was correct, and cbmc found it correct by using th
 #What was hard to specify?  Was there functionality you could not specify?
 
 #CBMC Runtime Result
+
+# The ability of the harness to find the bugs you introduced
