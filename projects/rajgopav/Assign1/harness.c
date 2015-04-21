@@ -76,5 +76,5 @@ int main ()
 
     printf("LOG: a[%d] = %d\n", i, a[i]);
   }
-  assert(0);
+  //assert(0);
 }
