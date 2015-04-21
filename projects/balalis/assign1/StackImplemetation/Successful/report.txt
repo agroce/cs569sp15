@@ -1,0 +1,12 @@
+# Was the program correct or buggy?
+I chose stack implementation program as my base code, this program defines a stack to hold characters. 
+The harness that I wrote for this program, checks whether the program is 
+doing well for the following conditions:
+1) if the stack is empty, it does not allow pop.
+2)if the stack is full, it does not allow push.
+
+The stack implementation code was correct, and cbmc found it correct by using the mentioned harness.
+
+#What was hard to specify?  Was there functionality you could not specify?
+
+#CBMC Runtime Result
