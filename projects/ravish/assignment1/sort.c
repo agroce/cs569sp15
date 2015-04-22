@@ -1,10 +1,11 @@
  
 #include <stdio.h>
+#include "sort.h"
  
-int main()
+int sort(int array, int n)
 {
-  int n, array[1000], c, d, t;
- 
+  int c, d, t;
+ /*
   printf("Enter number of elements\n");
   scanf("%d", &n);
  
@@ -13,6 +14,7 @@ int main()
   for (c = 0; c < n; c++) {
     scanf("%d", &array[c]);
   }
+  */
  
   for (c = 1 ; c <= n - 1; c++) {
     d = c;
