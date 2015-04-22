@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "sort.h"
  
-int sort(int array, int n)
+int sort(int array[], int n)
 {
   int c, d, t;
  /*
