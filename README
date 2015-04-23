@@ -46,3 +46,68 @@ Submission instructions:
 projects/<youronidid>/assign1
 
 and put everything in that directory
+
+
+RESEARCH PRESENTATION DETAILS:
+
+- send me an email with topic "569 PRESENTATION" and suggest a topic,
+  and grab a possible presentation date
+- presentations will be 15-20 minutes, we'll try to do four per class
+- aim to start this next Thursday
+
+POSSIBLE TOPICS:
+
+- Predicate abstraction (using SATABS, or just the basic topic)
+
+- Intro paper or presentation: what is predicate abstraction?  How is
+  it different from CBMC's SAT-based bounded model checking
+
+http://www.cs.ucla.edu/~todd/research/pldi01.pdf
+
+SATABS tool: http://www.kroening.com/papers/tacas2005.pdf
+
+http://pm.inf.ethz.ch/publications/getpdf.php?bibname=Own&id=Novacek12.pdf
+
+BLAST (lazy abstraction)
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.113.5090&rep=rep1&type=pdf
+
+Z3 (& SMT tools in general):
+
+http://research.microsoft.com/en-us/um/redmond/projects/z3/z3.pdf
+
+Concurrency:
+
+http://ti.arc.nasa.gov/publications/11593/download/
+
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.79.7642&rep=rep1&type=pdf
+
+http://www.kroening.com/papers/cav2013-wpo.pdf
+
+Uses of CBMC:
+
+- Fault localization -- http://www.cs.cmu.edu/~agroce/tacas04.pdf
+
+- Using traces to improve speed -- http://www.cs.cmu.edu/~agroce/tacas06.pdf
+
+Other topics:
+
+- Non-SAT Based/pred abs based model checkers
+
+SPIN Model Checker
+Java Pathfinder
+Symbolic Pathfinder (JPF + Symbolic Execution)
+
+- Symbolic execution tools (KLEE)
+   (how is it different from model checking)
+
+Model checking for particular goals:
+
+- probabilistic model checking
+- model checking Android
+- model checking for security properties
+
+Other stuff -- model checking + dynamic analysis
+
+SCHEDULE file in github will contain taken papers + dates
+
+send me a paper topic by next Wed. morning
