@@ -1,14 +1,18 @@
 # Was the program correct or buggy?
 I chose stack implementation program as my base code, this program defines a stack to hold characters. 
 The harness that I wrote for this program, checks whether the program is 
-doing well for the following conditions:
-1) if the stack is empty, it does not allow pop.
-2)if the stack is full, it does not allow push.
+doing well for the following condition:
+-if the stack is empty, it does not allow pop.
 
 The stack implementation code was correct, and cbmc found it correct by using the mentioned harness.
 
 #What was hard to specify?  Was there functionality you could not specify?
-I could not specify whethet the for loop in the display function works well or not.
+
+I could not specify whether the for loop in the display function works well or not.
+One problem that I faced was that the CBMC can not generate nondeterministic char, instead, it provides
+the corresponding integer of that charachter.
+Using the "__CPROVER_assume (SIZE == 10);" caused my harness not to work efficiently, so that the harness verified every code 
+successfully. The problem is fixed now.
 
 #CBMC Runtime Result
 When the verificatin is successful, for DSIZE = 2  and unwind = 4, with bounds check and pointer check, the
@@ -23,4 +27,13 @@ When the verificatin is successful,for DSIZE = 4 and unwind = 8, with bounds che
 CBMC runtime is about 0.216s seconds (it checks 111759 variables, 90511 clauses). For the same parameters but without bounds check and
 pointer check the verification took approximately 0.142 seconds ( it checks 92564 variables, 37083 clauses).
 
+We can see that the increase in the DSIZE and unwind value will increase the CBMC runtime. 
+However, when the bounds check and pointer check is not used, the CBMC runtime will decrease and the number of variables and clauses 
+which CBMC checks also decreases.
+
 # The ability of the harness to find the bugs you introduced
+After fixing the problem caused by "__CPROVER_assume (SIZE == 10);", the harness can find the bugs. For instance, 
+In order to check whether the harness can find the bugs in the code, I defined a bug in the code and I changed the condition
+I changed "stackP->top = -1;" to "stackP->top = 0;" and the cbmc could find the bug by using the harness.
+
+The related files are provided in the cs569sp15/projects/balalis/assign1/StackImplemetation.

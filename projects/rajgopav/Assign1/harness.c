@@ -62,4 +62,19 @@ int main ()
 
         printf ("LOG: refc = %d, acount = %d\n", refc, acount);
         assert (refc == acount);  // Assert whether times of values = val keep the same
+        
+// Verify the values that are present in the sorted array
+  for(i=0;i<SIZE;i++) 
+  {
+    a[i] = nondet_unsigned_int();
+    __CPROVER_assume(a[i]>0 && a[i]<=SIZE);
+
+  for(j=i+1;j<SIZE;j++)
+    {
+    __CPROVER_assume(a[i]!=a[j]);
+    }
+
+    printf("LOG: a[%d] = %d\n", i, a[i]);
+  }
+  //assert(0);
 }

@@ -16,7 +16,7 @@ int main(void)
    // int size;
     //__CPROVER_assume(size = 10);
     
-   __CPROVER_assume (SIZE == 10);
+ //  __CPROVER_assume (SIZE == 10);
    int i;
    char v;
     stackT stack;    /* A stack to hold characters. */
@@ -26,12 +26,8 @@ int main(void)
     unsigned int s = nondet_unsigned_int();
     __CPROVER_assume (s <= SIZE);
     
-    /*
-     * Get a string from the user--don't enter more
-     * than 100 characters!
-     */
     
-    for(i = 0; i <= SIZE; i++)
+    for(i = 0; i <= s; i++)
     {
         v = nondet_char();
         printf("LOG: str[%d] = %c \n", i, str[i]);
@@ -75,7 +71,7 @@ int main(void)
     
     StackDestroy(&stack);
 
-     if (StackIsEmpty == 1) // checks whether the stack is empty or not 
+     if (StackIsEmpty(&stack)== 1) // checks whether the stack is empty or not 
         {
             assert(StackPop(&stack) == NULL); // if yes, do not allow pop
         }
