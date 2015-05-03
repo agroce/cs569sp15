@@ -1,14 +1,8 @@
 Tahmid Nabi: "Model Checking Java Programs using Java Pathfinder"
 May 7th, 2015 (Thursday)
 
-Sogol Balali: "SATABS: SAT-Based Predicat Abstraction for ANSI-C"
-May 12th
-
-
 Jingewi Zhang: http://spinroot.com/spin/Doc/ieee97.pdf
 May 7th 
-
-Soroush Ghorashi: http://www.cs.ucla.edu/~todd/research/pldi01.pdf
 
 Haoxiang Wang: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.79.7642&rep=rep1&type=pdf
 (Bounded Model Checking of Concurrent Programs)
@@ -17,10 +11,10 @@ May 7th
 Hong Zheng: http://www.kroening.com/papers/cav2013-wpo.pdf
 May 7th
 
-Yueting Zhu:  "Error Explanation with Distance Metrics"
-May 19th
-
 Xin Liu:  "Statically Checking API Protocol Conformance with with Mind Multi-Obect Specifications" (ICSE'12)
+May 12th
+
+Sogol Balali: "SATABS: SAT-Based Predicat Abstraction for ANSI-C"
 May 12th
 
 Nitin Subramanian: Using Model Checking to Generate Test Cases for Android Applications
@@ -35,6 +29,18 @@ May 14th
 Lakshman Kollipara:  Exploiting Traces in Program Analysis
 May 14th
 
+Hongyan Yi: Falsification-Driven Verification (unpublished)
+May 19th
+
+Varun Rajgopal:  SMT-Based Bounded Model Checking of C++ Programs
+May 19th
+
+Prathamesh Patkar :  A Model-checking Approach to Analysing Organisational Controls in a Loan Origination Process
+May 19th
+
+Yueting Zhu:  "Error Explanation with Distance Metrics"
+May 19th
+
 Sumanth Avadhani, PRISM
 May 28th
 
@@ -44,12 +50,4 @@ May
 Francis Vo, http://ti.arc.nasa.gov/publications/11593/download/
 May
 
-Varun Rajgopal:  SMT-Based Bounded Model Checking of C++ Programs
-May 19th
-
-Hongyan Yi: Falsification-Driven Verification (unpublished)
-May 12th
-
-Prathamesh Patkar :  A Model-checking Approach to Analysing Organisational Controls in a Loan Origination Process
-May 19th
-
+Soroush Ghorashi: http://www.cs.ucla.edu/~todd/research/pldi01.pdf
