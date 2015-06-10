@@ -1,11 +1,12 @@
 # Assignment 1
 
 ## Files
-- **threading_race.c**: Simple threading program with a race condition.
-- **threading_mutex.c**: Simple Threading program with mutex to fix race condition.
-- **threading_deadlock.c**: Simple Threading program with a deadlock.
 - **threading_complex.c**: Complex threaded simulator using task synchronization.
 - **threading_simplified.c**:  Simplified program using task synchronization.
+- **threading_race.c**: Simple threading program with a race condition.
+- **threading_mutex.c**: Simple Threading program with mutex to fix race condition.
+- **threading_wrong.c**: A non-threaded program
+- **threading_deadlock.c**: Simple Threading program with a deadlock.
 - **cbmc_complex.out**: output from running CBMC on threading_complex.c
 
 

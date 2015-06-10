@@ -23,11 +23,11 @@ void *myThreadFun1(void *vargp)
 void *myThreadFun2(void *vargp)
 {
     int i = (int)vargp;
-    pthread_mutex_lock (&mutex1);
     pthread_mutex_lock (&mutex2);
-    printf("2 Global: %d\n", ++g);
-    pthread_mutex_unlock (&mutex2);
     pthread_mutex_lock (&mutex1);
+    printf("2 Global: %d\n", ++g);
+    pthread_mutex_lock (&mutex1);
+    pthread_mutex_unlock (&mutex2);
 }
 
 int threadCount(int num_threads)
