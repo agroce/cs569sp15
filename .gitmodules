@@ -1,3 +1,6 @@
 [submodule "projects/heap"]
 	path = projects/heap
 	url = https://github.com/hatpick/heap
+[submodule "projects/ghorashs/KarpRabin"]
+	path = projects/ghorashs/KarpRabin
+	url = https://github.com/hatpick/KarpRabin.git
