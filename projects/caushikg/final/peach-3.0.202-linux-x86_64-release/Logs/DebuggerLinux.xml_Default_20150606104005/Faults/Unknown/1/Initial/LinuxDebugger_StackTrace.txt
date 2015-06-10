@@ -1,0 +1,2 @@
+/tmp/gdb.v7oF2T/gdb.cmd:23: Error in sourced command file:
+Undefined command: "exploitable".  Try "help".

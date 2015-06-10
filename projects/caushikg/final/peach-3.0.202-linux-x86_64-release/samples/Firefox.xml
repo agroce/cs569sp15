@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Peach xmlns="http://peachfuzzer.com/2012/Peach" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://peachfuzzer.com/2012/Peach ../peach.xsd">
+	<!--<Include ns="default" src="file:defaults.xml" />-->
+
+	<!--
+
+	This is meant to be an example for fuzzing HTML with Firefox.
+	
+	Syntax:
+	
+	  peach samples\Firefox.xml
+	
+	Authors:
+	  Gokul Caushik
+	
+	-->
+
+	<DataModel name="HTML">
+        	<String type="utf8">
+			<Analyzer class="StringToken" />
+		</String>
+
+    	</DataModel>
+		
+	
+	<StateModel name="State" initialState="Initial">
+        	<State name="Initial">
+            		<Action type="output">
+                		<DataModel ref="HTML" />
+                <!--
+                    Peach will use this file as a starting point for generating fuzzed
+                    files. It will therefore need to figure out how this file can be
+                    interpereted based on the DataModel specified above (ref="HTML").
+                -->
+                		<Data fileName="/home/gokul/1.html" />
+            		</Action>
+            		<Action type="close" />
+
+			<Action type="call" method="Start" publisher="Peach.Agent"/>
+        	</State>
+    	</StateModel>
+
+
+	<Agent name="LocalAgent">
+		<Monitor class="Process">
+			<Param name="Executable" value="/usr/bin/firefox" />
+			<Param name="Arguments" value="/home/gokul/1.html" />
+		</Monitor>
+	</Agent>
+
+	<Test name="Default">
+		<Agent ref="LocalAgent"/>
+		<StateModel ref="State"/>
+		
+		<!-- This publisher will write our file. -->
+		<Publisher class="File">
+			<Param name="FileName" value="fuzzed.html"/>
+		</Publisher>
+		
+		<!-- To enable logging we must include this -->
+		<Logger class="Filesystem">
+			<Param name="Path" value="logs"/>
+		</Logger>
+	</Test>
+
+</Peach>
+<!-- end -->
