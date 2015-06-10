@@ -1,0 +1,13 @@
+I have included the Peach framework for you to look at.
+My pit file is in the Peach folder/samples/ directory.
+It is called Firefox.xml.
+
+To run Peach all you do is:
+
+cd to the Peach folder
+
+Then run:
+
+./peach samples/[Firefox].xml
+
+

@@ -1,0 +1,16 @@
+Peach Fuzzing Run
+=================
+
+Date of run: 6/6/2015 10:40:05 AM
+Peach Version: 3.0.202.0
+Seed: 23912
+Command line: samples/DebuggerLinux.xml 
+Pit File: samples/DebuggerLinux.xml
+. Test starting: Default
+
+. Iteration 1 : 6/6/2015 10:40:06 AM
+. Iteration 1 of 4294967295 : 6/6/2015 10:40:06 AM
+! Fault detected at iteration 1 : 6/6/2015 10:40:07 AM
+. Iteration 1 of 4294967295 : 6/6/2015 10:40:09 AM
+! Fault detected at iteration 1 : 6/6/2015 10:40:11 AM
+! Fault detected at iteration 4 : 6/6/2015 10:40:11 AM

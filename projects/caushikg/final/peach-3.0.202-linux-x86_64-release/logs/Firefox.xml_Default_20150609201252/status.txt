@@ -1,0 +1,12 @@
+Peach Fuzzing Run
+=================
+
+Date of run: 6/9/2015 8:12:51 PM
+Peach Version: 3.0.202.0
+Seed: 29946
+Command line: ./samples/Firefox.xml 
+Pit File: ./samples/Firefox.xml
+. Test starting: Default
+
+. Iteration 1 : 6/9/2015 8:12:52 PM
+. Iteration 1 of 4294967295 : 6/9/2015 8:14:32 PM
